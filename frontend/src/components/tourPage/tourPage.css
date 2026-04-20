@@ -1,0 +1,10 @@
+.grid-images {
+    max-width: 15rem;
+    border-radius: .4rem;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+img[data-active="true"] {
+    max-width: 62rem;
+}

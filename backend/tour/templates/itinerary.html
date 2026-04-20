@@ -1,0 +1,24 @@
+<table style="width: 100%">
+    <thead>
+        <tr>
+            <th>Place</th>
+            <th>Content</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if data %}
+            {% for item in data %}
+                <tr id="{{item.place}}-{{forloop.counter}}">
+                    <td>{{item.place}}</td>
+                    <td>{{item.content}}</td>
+                    <td>
+                        <span class="inline-deletelink delete-itinerary" data-item="{{item.place}}" data-index="{{forloop.counter}}"></span>
+                    </td>
+                </tr>
+            {% endfor %}
+        {% else %}
+                <span>No Itinerary Available.</span>
+        {% endif %}
+    </tbody>
+</table>
